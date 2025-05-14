@@ -1,0 +1,25 @@
+<header>
+    <div class="container header-container">
+        <a href="#" class="logo">
+            <div class="logo-icon"><i class="fas fa-code"></i></div>
+            <div class="logo-text">Zall<span>Web</span></div>
+        </a>
+        <button class="mobile-menu-btn" @click="toggleMenu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" :class="{ active: menuActive }">
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="#services"><i class="fas fa-laptop-code"></i> Layanan</a></li>
+            <li><a href="#dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+            <li><a href="#help"><i class="fas fa-robot"></i> AI Help</a></li>
+            <li><a href="#code"><i class="fas fa-file-code"></i> Code Editor</a></li>
+        </ul>
+    </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const headerComponent = document.getElementById('header-component');
+    headerComponent.innerHTML = document.currentScript.previousElementSibling.innerHTML;
+});
+</script>
